@@ -10,10 +10,28 @@
   }
 }
 
+:root {
+	--btn-border: #fff;
+	--btn-color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+}
+
 body {
 	margin: 0;
-	background: #fff;
+	background: #000;
 	color: #000;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
+}
+
+.swiper-container {
+	width: 100%;
+}
+
+svg {
+	fill: #fff;
 }
