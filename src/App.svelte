@@ -1,30 +1,39 @@
 <script>
-	export let name;
-</script>
+  import { setContext } from 'svelte'
+  import { cards } from './store/cards.js'
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+  import Slider from './components/Slider.svelte'
+  import Button from './components/Button.svelte'
+
+  setContext('audio', new Audio())
+</script>
+<div class="container">
+  <div class="app-content">
+    <Slider slides={$cards}/>
+  </div>
+  <div class="app-footer">
+    <Button label="Invert colors" />
+  </div>
+</div>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
+  }
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+  .app-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;;
+  }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  .app-footer {
+    padding: 2rem 0;
+  }
 </style>
