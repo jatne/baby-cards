@@ -19,11 +19,12 @@
     width: 100%;
     padding: 1rem;
     max-height: 80vh;
+    cursor: pointer;
   }
 
   .card img {
     max-width: 100%;
     height: auto;
-    filter: invert(1);
+    /* filter: invert(1); */
   }
 </style>
